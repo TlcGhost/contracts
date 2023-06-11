@@ -11,12 +11,4 @@ contract GHSI is ERC20, ERC20Burnable, Ownable {
     constructor() ERC20("GHSI", "GHSI") {
         _mint(msg.sender, maxSupply);
     }
-
-    function revokeOwnership() public onlyOwner {
-        renounceOwnership();
-    }
-
-    function changeOwner(address newOwner) public onlyOwner {
-        transferOwnership(newOwner);
-    }
 }
